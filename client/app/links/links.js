@@ -20,12 +20,6 @@ angular.module('shortly.links', [])
     return false;
   }
 
-  $scope.getLink = function (shortenedUrl) {
-    //look for shortenedUlr in list of links
-    //if found, redirect browser to the full url
-    //if not found then render "invalid shortened url page"
-  } 
-
   if (!Auth.isAuth()) {
     $location.path('/signin');
   } else {
