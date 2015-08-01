@@ -7,5 +7,9 @@ angular.module('shortly.shorten', [])
     Links.addLink(link);
   };
 
+  $scope.signout = function () {
+    Auth.signout();
+    return false;
+  }
 
 });

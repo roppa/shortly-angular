@@ -1,6 +1,7 @@
-<div id='container'>
-<!-- Your code here -->
-
+<ng-include src="'/app/nav/nav.html'"></ng-include>
+<div id='container' ng-controller="ShortenController">
+  <input type='text' ng-model="newLink" placeholder='write a url like http://www.google.com'> 
+  <button ng-click="addLink({ url : newLink })">Shorten</button>
 </div>
 
 

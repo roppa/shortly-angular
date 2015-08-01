@@ -1,3 +1,11 @@
+<ng-include src="'/app/nav/nav.html'"></ng-include>
 <div id='container' ng-controller="LinksController">
-  <!-- Your html here -->
+
+  <article class="link" ng-repeat="link in data.links">
+    <h2 class="title">{{link.title}}<span class="visits">Visits: <span class="count">{{link.visits}}</span></span></h2>
+    <p>{{link.url}}</p>
+    <p><a href="/{{link.code}}">{{link.code}}</a></p>
+  </article>
+
 </div>
+
