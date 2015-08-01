@@ -9,7 +9,7 @@ angular.module('shortly.services', [])
     })
     .then(function (resp) {
       return resp.data;
-    });
+    })
   };
 
   var addLink = function (link) {

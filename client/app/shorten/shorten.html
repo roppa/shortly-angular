@@ -1,7 +1,8 @@
 <ng-include src="'/app/nav/nav.html'"></ng-include>
-<div id='container' ng-controller="ShortenController">
-  <input type='text' ng-model="newLink" placeholder='write a url like http://www.google.com'> 
-  <button ng-click="addLink({ url : newLink })">Shorten</button>
-</div>
+<form name='UrlForm' id='container' ng-controller="ShortenController">
+  <input ng-class="{ error : UrlForm.$error.url }" type='url' ng-model="newLink" placeholder='write a url like http://www.google.com'> 
+  <button ng-click="addLink({ url : newLink })" ng-disabled="UrlForm.$invalid">Shorten</button>
+  <p ng-show="UrlForm.$invalid" class="help-block">Url not valid.</p>
+</form>
 
 
